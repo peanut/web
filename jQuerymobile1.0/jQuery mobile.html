@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+		<title></title>
+		<meta name="viewport" content="width=device-width, 
+			user-scalable=no, initial-scale=1.0, maximum-scale=1.0, 
+			minimum-scale=1.0" />
+	    <link rel="stylesheet" href="swiper-3.4.2.min.css">
+	    <script src="swiper-3.4.2.min.js"></script>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />		
+		<script src="jQuery.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			.ui-bar-f{
+				background-color: teal;
+			}
+			.swiper-container 
+			{		    
+		    height: 250px;
+		    text-align: center;
+		    font-size: 50px;		    
+	     	}  
+			.swiper-slide
+			{				
+				line-height: 250px;
+			}	
+			.image
+			{				 
+				width: 100%;
+				height: 300px;
+			}			 	 
+		</style>
+	</head>
+	<body>
+		<div data-role="page" id="page-one"   data-theme="b">
+			<div data-role="header" data-theme="f">
+				<h1>Hello H5</h1>
+			</div>
+			<div data-role="content">				
+				
+				<!--轮播图-->
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><img class="image" src="img/3.1_09.jpg"></div>
+				        <div class="swiper-slide"><img class="image" src="img/3.1_11.jpg"></div>
+				        <div class="swiper-slide"><img class="image" src="img/3.1_13.jpg"></div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				   
+				    <!-- 如果需要导航按钮 -->
+				    <!--<div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>	 -->
+				</div>
+
+				
+				 	<!--超链接按钮-->
+				 	<a href="#page-two" data-role="button" data-transition="slide" 
+				 		data-direction="reverse" data-icon="arrow-r" data-iconpos="right">请戳下一页</a>
+				 	 <!--<button ><a  href="#page-two" data-transition="slide" data-direction="reverse"   style="text-decoration: none;" >
+					请戳下一页</a></button> -->
+					<div data-role="controlgroup" data-type="horizontal">
+						<p>水平分组：</p>
+						<a href="#" data-role="button" data-mini="true">按钮 1</a>
+						<a href="#" data-role="button" >按钮 2</a>
+						<a href="#" data-role="button">按钮 	3</a>
+					</div>
+				 
+			</div>
+			 <div data-role="footer" data-position="fixed" data-theme="f">
+				<h1>@H5</h1>
+			 </div>
+		  </div>
+		
+		<!--第二页-->
+		<!--data-dialog="true"  是该页以窗口形式打开-->
+		 <div data-role="page" id="page-two"  data-theme="b">
+			<div data-role="header">
+				
+				<h1>Hello H5</h1>
+			</div>
+			<div data-role="content">
+				<!--使用data-rel设置后退-->
+				<a href="#" data-transition="slide"  data-rel="back" data-role="button">返回上一页</a>
+				<!--<button><a href="#page-one" data-transition="slide" style="text-decoration: none;" >返回上一页</a></button>-->
+				<a href="影评.html"  rel="external" data-transition="pop" style="text-decoration: none;">看电影</a>
+				<a data-role="button" data-icon="search" data-iconpos="notext" data-inline="true"></a>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h1>Hello H5</h1>
+			</div>
+		</div>
+			
+			
+			
+	</div>
+	</body>
+	<script>        
+	  var mySwiper = new Swiper ('.swiper-container', {
+	    // direction: 'vertical',
+	    autoplay : 0,
+	    loop: true,	    
+	    
+	    // 如果需要分页器
+	    pagination: '.swiper-pagination',
+	    
+	    // 如果需要前进后退按钮
+//	    nextButton: '.swiper-button-next',
+//	    prevButton: '.swiper-button-prev',	    
+	     
+	  })       
+	  
+	 window.onload=setInterval("mySwiper.slideNext()", 2000);
+  </script>
+
+</html>
