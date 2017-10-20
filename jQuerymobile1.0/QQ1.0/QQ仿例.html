@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>QQ登录</title>
+		<meta name="viewport" content="width=device-width, 
+			user-scalable=no, initial-scale=1.0, maximum-scale=1.0, 
+			minimum-scale=1.0" />
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+		<script src="jQuery.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		
+		<style>
+			.foot{
+				float: left;
+				width: 33%;
+				text-align:center;
+				margin: -10px 0; 
+			}
+			.foot a{				 
+				text-decoration: none;
+				font-size: 14px;
+			}
+			.logos{
+	        	width: 20px;
+	        	height:20px;
+	        	margin-bottom: -22px;
+	        }
+	        .search{	        	
+	        	margin-top: -30px ;
+	        }
+	        .pic{
+	        	width: 30px;
+	            height: 30px;
+	            border-radius: 15px;        }
+	        .pics{	        	 
+	        	width: 60px;
+	        	height: 60px;
+	        	border-radius: 30px;
+	        	margin-top: 10px;
+	        	margin-left: 20px; 
+	        	
+	        }
+	        
+	        
+	        /*page-two*/
+	        .back{
+	        	width: 100%;
+	        	height: 100%;
+	        	background-image: url("img/back.png");		 
+	        	 
+	        }
+	        .pic2{
+	        	height: 120px;
+	        	width:120px;
+	        	border-radius: 60px;
+	        
+	        }
+	        .pp{
+	        	 text-align: center;
+	        	 margin-top: 100px;
+	        	 color: white;
+	        	 font-size: 20px;
+	        }
+	        .login{
+	        	margin: 0 50px;
+	        }
+	        .in{
+	        	background-color: cadetblue;
+	        }
+	        .down{
+	        	margin: 165px 15px 0 15px;
+	        }
+	        
+	        
+	        /*page-three*/
+	       .backzhu{
+	       	    background-size: 100% 100%;
+	        	background-image: url("img/back3.jpg");
+	        
+	       }
+	       .bottom{
+	        	margin: 120px 15px 0 15px;
+	        }
+
+		</style>
+	</head>
+	<body>
+		<!--第一页 登录页-->
+		 <div data-role='page' id="page-one" class="back">
+		 	<div data-role="contnet" >
+		 		<p class="pp"><img src="img/QQ1.jpg" class="pic2"><br/>登录</p>
+		 		<div data-role="fieldcontain" class="login">				     
+				    <input type="text" id="userid" placeholder="账号" />
+				    <input type="text" id="psw" placeholder="密码" />
+				    <a href="#" id="log" data-role="button" style=" border:#3366ff;;background-color:#3366ff; color: white;">登录</a>
+				</div>
+                <div class="down" >
+                	<a href="#" style="color: white;">忘记密码？</a>
+                	<a href="#" style="color: white; float: right;">帮助</a>
+                </div>
+		 	</div>
+		 </div>
+		 
+		 
+		 <!--第二页 注册页-->
+		 <div data-role="page" id="page-two" class="backzhu">
+		 	<div data-role="contnet" >
+		 		<p class="pp"><img src="img/QQ1.jpg" class="pic2"><br/>QQ注册</p>
+		 		<div data-role="fieldcontain" class="login">				     
+				    <input type="text" id="id" placeholder="账号" />
+				    <input type="text"  placeholder="密码" />
+				    <input type="text" id="password" placeholder="确认密码" />
+				    <a href="#" id="zhuce" data-role="button" style=" border:#2266ff;;background-color:#3366ff; color: white;">注册</a>
+				</div>
+                <div class="bottom" >                	 
+                	<a href="#" style="color: white; float: right;">帮助</a>
+                </div>
+		 	</div>
+		 </div>
+		 
+		 
+		 
+		 
+		 
+		 
+		<!--第三页 聊天页-->
+		 <div data-role="page"  id="page-three" data-theme="b">
+		 	<!--顶部-->
+		 	<div data-role="header" data-position="fixed">
+		 		  <a href="#page-one" data-role="none"   data-iconpos="notext">
+		 		  	 <img src="img/movie-1.png"  style="width: 25px; height: 25px; border-radius: 12px; margin: 5px 7px;"  />
+		 		  </a>	 		 
+		 		 <h1>消息</h1>
+		 		 <a href="#"  data-icon="plus" data-iconpos="notext"> </a>
+		 	</div>
+		 	
+		 	<!--内容-->
+		 	<div data-role="content" data-theme="a" >	
+		 		<div data-role="fieldcontain" class="search">
+                    <input type="search" name="search" id="search"  placeholder="搜索"/>  
+                </div>
+                
+                <ul data-role="listview">                   
+				   <li>
+				         <a href="#">
+				             <img  src="img/movie-2.png"  class="pics" style="border-radius: 40px;">
+				             <h2>小苹果</h2>
+				             <p>揍哈呢？ 不搭理我</p>
+				         </a>
+				  </li>
+				   <li >
+				         <a href="#">
+				             <img  src="img/movie-1.png"  class="pics">
+				             <h2>娱乐群</h2>
+				             <p>哈哈哈，666~</p>
+				         </a>
+				  </li>
+				   <li >
+				         <a href="#">
+				             <img  src="img/movie-3.png"  class="pics">
+				             <h2>H5大家庭</h2>
+				             <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先</p>
+				         </a>
+				  </li>
+				   <li >
+				         <a href="#">
+				             <img  src="img/movie-4.png"  class="pics">
+				             <h2>十天共读一本书</h2>
+				             <p>《重生》超级好看，你看了没</p>
+				         </a>
+				  </li>
+				   <li >
+				         <a href="#">
+				             <img  src="img/3.1_09.jpg"  class="pics">
+				             <h2>冠军老师</h2>
+				             <p>这么简单都不会？！百度去</p>
+				         </a>
+				  </li>
+				   <li >
+				         <a href="#">
+				             <img  src="img/3.1_11.jpg"  class="pics">
+				             <h2>我要脱单</h2>
+				             <p>对面的女孩看过来*-*</p>
+				         </a>
+				  </li>
+				   <li >
+				         <a href="#">
+				             <img  src="img/3.1_13.jpg"  class="pics">
+				             <h2>Google Chrome</h2>
+				             <p>Google Chrome is a free,open-source</p>
+				         </a>
+				  </li>
+                </ul>
+               
+
+		 	</div>
+		 	<!--底部-->
+		 	<div data-role="footer" data-position="fixed" data-theme="b" >
+		 		<div class="foot" >
+		 			<img class="logos" src="img/movie-5.png"/>
+		 			 <p><a href="#" style="color: white;">消息</a></p>
+		 		</div>
+		 		<div class="foot">
+		 			<img class="logos" src="img/movie-8.png"/>
+		 			<p><a href="#" style="color: white;" >联系人</a></p>
+		 		</div>
+		 		<div class="foot">
+		 			<img class="logos" src="img/movie-9.png"/>
+		 			<p><a href="#" style="color: white;">动态</a></p>
+		 		</div>				 
+		    </div>
+		 </div>
+		 
+		 
+		 
+		 
+	</body>
+	<script>
+		//登录
+		$("#log").click(function(){
+		  var userid=document.getElementById('userid').value;
+		  var psw=document.getElementById("psw").value;
+	      $.ajax({
+			type:'get',
+			//接口
+			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			data:{status:'login',userID:userid,password:psw},
+			dataType:'json',
+				//.parse(data)(拿到可读数据)
+			success:function(data){					 
+					console.log(data);
+					if(data==0){
+						alert("用户名不存在，请前往注册");
+						window.location.href="#page-two";		
+					}
+					else if(data==2){
+						 alert("用户名密码不符");	
+					}
+					else{
+						window.location.href="#page-three";	
+					}
+			},
+			error:function(){
+				alert('error');
+				
+				
+			}
+		})
+		})
+		
+		
+		//注册
+		$("#zhuce").click(function(){
+		  var userid=document.getElementById('id').value;
+		  var psw=document.getElementById("password").value;
+	      $.ajax({
+			type:'get',
+			//接口
+			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			data:{status:'register',userID:userid,password:psw},
+			dataType:'json',
+				//.parse(data)(拿到可读数据)
+			success:function(data){					 
+					console.log(data);
+					if(data==0){
+						alert("用户名重名");						 	
+					}
+					else if(data==1){
+						 alert("注册成功，开始聊天");
+						 window.location.href="#page-three";
+					}					 
+			},
+			error:function(){
+				alert('error');				
+				
+			}
+		})
+		})
+
+	</script>
+</html>
